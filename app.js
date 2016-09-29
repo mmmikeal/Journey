@@ -60,7 +60,10 @@ app.use(usersRoutes.router);
 app.use(searchRoutes);
 
 
-app.listen(process.env.PORT,process.env.IP,function(){
-    console.log("Journey has started ");
-});
+// app.listen(process.env.PORT,process.env.IP,function(){
+//     console.log("Journey has started ");
+// });
 
+app.listen(8000, function() {
+  console.log('cool stuff on: 8000');
+});
