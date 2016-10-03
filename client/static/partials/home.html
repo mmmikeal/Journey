@@ -1,0 +1,30 @@
+<div id="header">
+	<ul>
+		<li id="title">Journey</li>
+		<div id="login">
+			<li ng-show="user.loggedIn"><a href="default.asp">Home</a></li>
+			<li ng-show="user.loggedIn"><a href="news.asp">New Journey</a></li>
+			<li ng-show="user.loggedIn"><a href="contact.asp">Search</a></li>
+			<li ng-show="user.loggedIn"><a href="about.asp">Planner</a></li>
+			<li>
+				<form>
+					Username: <input ng-hide="user.loggedIn" type="text" required>	
+					Password: <input ng-hide="user.loggedIn" type="password" required>
+					<button ng-click="" ng-hide="user.loggedIn">Login</button>			
+				</form>	
+			</li>
+			<li>
+				<button ng-show="user.loggedIn">Logout</button>
+			</li>	
+		</div>			
+	</ul>	
+</div>
+
+<div id="body">
+	<div id="image">
+		<h1 >Adventure is out there</h1>
+	    <p >Plan and share your adventures with journey</p>
+	    <a href="/newJourney" type="button" class="btn btn-default navbar-btn">Create journeys</a>		
+	</div>
+	
+</div>

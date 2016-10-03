@@ -1,5 +1,5 @@
  var mongoose                = require("mongoose");
- 
+
  var commentsSchema= new mongoose.Schema({
         username: String,
         comment: String,

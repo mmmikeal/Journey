@@ -1,0 +1,80 @@
+*{
+    font-family: Helvetica, "Trebuchet MS", Arial, sans-serif;
+    margin: auto;
+
+}
+button {
+	border-radius: 10%;
+	background-color: white;
+	border: 1px solid grey;
+	font-size: 80%;
+	padding: 5px 10px 5px 10px;
+}
+
+input{
+	line-height: 25px;
+	border-radius: 10%;
+}
+
+ul{
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+	height: 60px;
+	color: grey;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #f3f3f3; 
+	border: 1px solid #e7e7e7;
+}
+	ul #title{
+		margin-left: 15px;
+		font-size: 35px;
+		font-weight: 200;
+	}
+	li{
+		display: inline;
+	}
+	li a:hover {
+	    background-color: brown;
+	}
+
+	ul #login{
+		float: right;
+		margin-right: 1%;
+		margin-top: 15px;
+	}
+.active{
+	background-color: #333; 
+}
+#body{
+	margin-top: 80px;
+	width: 90%;
+	z-index: 0;
+}
+	#body #image{
+		background-image: url("https://static.pexels.com/photos/12582/photo-1440557958969-404dc361d86f.jpeg"); 
+		background-position: center ;
+		/*text-align: center;*/
+		background-repeat: no-repeat;
+		background-size: cover; 
+		height: 400px;
+	}
+	#body #image h1{
+		margin-left: 50px;
+		padding: 10px;
+
+	}
+	#body #image p{
+		margin-left: 50px;
+		padding: 10px;
+	}
+	#body #image a{
+		padding: 10px;
+		margin-left: 50px;
+	}
+
+
+
+

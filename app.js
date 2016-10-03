@@ -13,10 +13,10 @@ var express                 =   require("express"),
     searchRoutes            =   require("./routes/searchRoutes.js"),
     plannerRoutes           =   require("./routes/plannerRoutes.js"),
     methodOverride          =   require("method-override");
-    
+    path                    =   require("path");
    
 
-    app.use(require("express-session")({
+app.use(require("express-session")({
     secret: "Journey code",
     resave: false,
     saveUninitialized: false
@@ -26,12 +26,14 @@ app.use(flash());
 
 app.use(methodOverride("_method"));
 
-
 var url = process.env.DATABASEURL || "mongodb://localhost/journey_app";
 mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.set("view engine","ejs" );
+// app.set("view engine","ejs" );
+
+//directing views to client folder
+app.use(express.static(path.join(__dirname, './client'))); 
 
 //initialize passport
 app.use(passport.initialize());
@@ -65,5 +67,5 @@ app.use(searchRoutes);
 // });
 
 app.listen(8000, function() {
-  console.log('cool stuff on: 8000');
+  console.log('listen on: 8000');
 });
