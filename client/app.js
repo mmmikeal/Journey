@@ -6,7 +6,7 @@ myApp.config(function($routeProvider){
 		controller: 'landingController',
 		templateUrl: 'static/partials/home.html'
 	})
-	.when('/newJourney', {
+	.when('/newjourney', {
 		templateUrl: 'static/partials/newJourney.html'
 	})
 	.otherwise({

@@ -15,7 +15,10 @@
 			</li>
 			<li>
 				<button ng-show="user.loggedIn">Logout</button>
-			</li>	
+			</li>
+			<li>Want to create a journey?</li>
+			<button id="myBtn">Sign Up</button>
+			<!-- <a href="" id="myBtn">Sign up</a>	 -->
 		</div>			
 	</ul>	
 </div>
@@ -28,3 +31,46 @@
 	</div>
 	
 </div>
+
+<!-- The modal -->
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="close">x</span>
+		<p>Sign Up</p>
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+	// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+	console.log('hi');
+	console.log(btn);
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on the button, open the modal 
+	btn.onclick = function() {
+		console.log('clicked')
+	    modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
+</script>
+
